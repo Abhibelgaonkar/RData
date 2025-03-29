@@ -1,0 +1,158 @@
+Basics of Language R
+
+Data Types in R:
+
+1. Numeric (Double)                                                 
+> x <- 10.5      # Numeric (default is double)
+> print(x)
+[1] 10.5
+> class(x)      
+ # Output: "numeric"
+[1] "numeric"
+
+2. Integer
+> y <- 10L        # Integer (suffix "L" is used)
+> print(y)
+[1] 10
+> class(y)          
+# Output: "integer"
+[1] "integer"
+
+3. Character (String)
+> z <- "Hello, R!"
+> print(z)
+[1] "Hello, R!"
+> class(z)         # Output: "character"
+[1] "character"
+
+4. Logical (Boolean)
+> a <- TRUE
+> b <- FALSE
+> print(a)
+[1] TRUE
+> print(b)
+[1] FALSE
+> class(a) 
+ # Output: "logical"
+[1] "logical"
+
+5. Complex
+> c <- 3 + 4i
+> print(c)
+[1] 3+4i
+> class(c)  
+
+# Output: "complex"
+"complex"
+
+
+
+Vectors in R
+
+Numeric vector
+
+> num_vec <- c(1, 2, 3, 4, 5)
+> print(num_vec)
+[1] 1 2 3 4 5
+> class(num_vec)  
+ # Output: "numeric"
+[1] "numeric"
+
+Character vector
+
+> char_vec <- c("apple", "banana", "cherry")
+> print(char_vec)
+[1] "apple" "banana" "cherry"
+> class(char_vec)    
+ # Output: "character"
+[1] "character"
+
+
+List in R
+> ID = c(1,2,3,4)
+> emp.name =c("Man","Rag","Sha","Din")
+> num.emp = 4
+> emp.list = list(ID, emp.name,num.emp)
+> print(emp.list)
+[[1]]
+[1] 1 2 3 4
+
+[[2]]
+[1] "Man" "Rag" "Sha" "Din"
+
+[[3]]
+[1] 4
+
+
+Data Frames in R
+
+> vec1 = c(1,2,3)
+> vec2 = c("R","Scilab","Java")
+> vec3 = c("For prototyping",
++          "For prototyping","For Scaleup")
+> df = data.frame(vec1,vec2,vec3)
+> print(df)
+
+
+  vec1   vec2            vec3
+1    1      R For prototyping
+2    2 Scilab For prototyping
+3    3   Java     For Scaleup
+
+
+Control structures in R
+
+If statement
+   > x <- 10
+> if (x > 5) {
++   print("x is greater than 5")
++ }
+[1] "x is greater than 5"
+
+If-else if-else
+> x=6
+> if(x>7)
+{
+	 x=x+1
+ }
+else if(x>8)
+{
+	x=x+2
+}else 
+{
+	 x=x+3}
+> x
+[1] 9
+
+If-else statement
+> x <- 3
+> if (x > 5) {
++   print("x is greater than 5")
++ } else {
++   print("x is less than or equal to 5")
++ }
+[1] "x is less than or equal to 5"
+
+For Loop with if break statement
+for (i in 1:10) {
++   if (i == 6) {
++     break  # Exit loop when i is 6
++   }
++   print(i)
++ }
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+
+
+
+Matrix Operation in R
+
+> A= matrix(c(1,2,3,4,5,6,7,8,9), nrow =3 ,ncol=3 , byrow=TRUE)
+> A
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
